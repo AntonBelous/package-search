@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <span>Produced by Anton Belous</span>
+        <span>Created by Anton Belous</span>
         <ul>
             <li>
                 <a href="https://t.me/tony_9lives" target="_blank">
