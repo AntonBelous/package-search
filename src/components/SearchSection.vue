@@ -53,13 +53,11 @@
                 });
             },
             submitForm() {
+                if (this.paginationPage !== 0) this.$store.dispatch('setPaginationPage', 0);
                 this._getItems();
             }
         },
         watch: {
-            searchInputText() {
-                if (this.paginationPage !== 0) this.$store.dispatch('setPaginationPage', 0);
-            },
             paginationPage() {
                 this._getItems();
             },
