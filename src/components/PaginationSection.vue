@@ -36,7 +36,7 @@
                 </li>
             </ul>
         </nav>
-        <span>{{ infoText }}</span>
+        <span class="pagination-section__total-text" v-html="infoText"></span>
     </div>
 </template>
 
@@ -63,7 +63,7 @@
                     max = page * 10 + 10 >= total ? total : page * 10 + 10,
                     borders = max > 1 ? `${min}-${max}` : '1';
 
-                if (total) return `${borders} from ${this.searchTotalAmount}`;
+                if (total) return `<b>${borders}</b> from <b>${this.searchTotalAmount}</b>`;
                 else return '';
             }
         },
