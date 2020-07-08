@@ -1,0 +1,46 @@
+.pagination-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+  .pagination {
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+  .page-item {
+    display: none;
+    position: relative;
+    &.active,
+    &:first-child,
+    &:last-child {
+      display: block;
+    }
+    &.active {
+      .page-link {
+        background-color: $secondary;
+        border-color: $secondary;
+      }
+    }
+    &:first-child,
+    &:last-child {
+      .page-link {
+        width: 32px;
+      }
+    }
+  }
+  .page-link {
+    width: 46px;
+    height: 35px;
+    padding: 0;
+    color: $body-color;
+    &:focus {
+      outline: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}

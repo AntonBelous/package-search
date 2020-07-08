@@ -1,0 +1,56 @@
+// node modules
+@import "~bootstrap";
+
+// components
+@import "components/search-section";
+@import "components/pagination-section";
+@import "components/result-section";
+@import "components/footer";
+@import "components/modal";
+
+
+
+body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 15px 0;
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+}
+
+#app {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  flex-grow: 1;
+  -webkit-border-radius: $input-border-radius;
+  -moz-border-radius: $input-border-radius;
+  border-radius: $input-border-radius;
+  -webkit-box-shadow: $box-shadow-lg;
+  -moz-box-shadow: $box-shadow-lg;
+  box-shadow: $box-shadow-lg;
+  border: 1px solid $gray-400;
+  padding: 15px;
+  z-index: 0;
+  &.disabled {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($white, .7);
+      z-index: 5;
+    }
+  }
+}
+
+.form-control:focus::placeholder {
+  color: transparent;
+}
