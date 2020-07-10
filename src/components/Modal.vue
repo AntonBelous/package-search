@@ -101,7 +101,9 @@
         },
         watch: {
             modalData() {
-                let plugin = this.modalData.package;
+                let plugin = this.modalData ? this.modalData.package : false;
+
+                if (!plugin) return;
 
                 function has(object, key) {
                     return object ? Object.hasOwnProperty.call(object, key) : false;
